@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build solution",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "CIS3285_Chap8_OpenClosed.sln"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Test solution",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "test",
+        "CIS3285_Chap8_OpenClosed.sln"
+      ],
+      "group": "test",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Build AbstractTrader",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "AbstractTrader/AbstractTrader.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Build VirtualTrader",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "VirtualTrader/VirtualTrader.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run AbstractTrader",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "AbstractTrader/AbstractTrader.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run VirtualTrader",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "VirtualTrader/VirtualTrader.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

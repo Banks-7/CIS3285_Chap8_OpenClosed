@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug AbstractTrader",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build AbstractTrader",
+      "program": "${workspaceFolder}/AbstractTrader/bin/Debug/net10.0/AbstractTrader.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Debug VirtualTrader",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build VirtualTrader",
+      "program": "${workspaceFolder}/VirtualTrader/bin/Debug/net10.0/VirtualTrader.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}
